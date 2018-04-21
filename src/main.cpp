@@ -501,6 +501,8 @@ get_title_text(CXCursor* node)
 		node_it = clang_getCursorSemanticParent(node_it);
 	}
 
+	result += " ";
+
 	auto cursor_kind = clang_getCursorKind(*node);
 	if (cursor_kind == CXCursorKind::CXCursor_FunctionDecl ||
 		cursor_kind == CXCursorKind::CXCursor_FunctionTemplate ||

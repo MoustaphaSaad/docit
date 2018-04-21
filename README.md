@@ -59,4 +59,6 @@ premake5 vs2017
 This is only tested on windows but I don't see why it won't work for Linux but make sure you have libclang installed first
 
 
+## License
+**docit** is released under the GNU Lesser General Public License version 3.
 

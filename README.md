@@ -1,7 +1,7 @@
-#Docit
+# Docit
 Docit is a C++ documentation extraction tool.
 
-##Example
+## Example
 Check out the [example.cpp](example.cpp) file and see the generated [example.md](example.md) document.
 
 ## Rules

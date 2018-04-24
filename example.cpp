@@ -26,7 +26,7 @@ namespace My_Namespace
 
 	/**
 	 * [[markdown]]
-	 * ##Markdown Section
+	 * ## Markdown Section
 	 * This is a section that will be included in the output
 	 * you can write anything markdown and it will be included but you have to put the
 	 * 
@@ -34,7 +34,7 @@ namespace My_Namespace
 	 * 
 	 * tag anywhere in the comment and the line containing it will be removed
 	 * 
-	 * ###Example Code:
+	 * ### Example Code:
 	 * ```C++
 	 * #include <iostream>
 	 * using namespace std;

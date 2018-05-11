@@ -1,3 +1,10 @@
+# Funciton `min`
+```C++
+template<typename T, typename TCompare>
+inline static const T&
+min(const T& a, const T& b, TCompare&& compare_func = TCompare());
+```
+ - **brief:**      Given two variables it will return the minimum value - **param[in]:**  a          The first value - **param[in]:**  b          The second value - **param[in]:**  compare_func  The compare function - **tparam:**     T          Type of the values - **tparam:**     TCompare   Type of the compare function - **return:**     The minimum value of the two
 # Struct `BaseA`
 ```C++
 struct BaseA;

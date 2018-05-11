@@ -289,6 +289,7 @@ CXChildVisitResult
 visit_children(CXCursor node, CXCursor parent, CXClientData user_data)
 {
 	Docit_State* docit = (Docit_State*)user_data;
+	//cursor_show_spelling(&node);
 
 	if (clang_isDeclaration(clang_getCursorKind(node)) &&
 		clang_getCursorKind(node) != CXCursorKind::CXCursor_Namespace &&
@@ -474,11 +475,14 @@ export_code(std::stringstream& out, const std::vector<std::string>& file_lines, 
 				for (first_indentation_count = 0; first_indentation_count < file_lines[i].size(); ++first_indentation_count)
 					if (!std::isspace(file_lines[i][first_indentation_count]))
 						break;
-				out << file_lines[i].substr(first_indentation_count) << std::endl;
+
+				if(file_lines[i].size() > first_indentation_count)
+					out << file_lines[i].substr(first_indentation_count) << std::endl;
 			}
 			else
 			{
-				out << file_lines[i].substr(first_indentation_count) << std::endl;
+				if(file_lines[i].size() > first_indentation_count)
+					out << file_lines[i].substr(first_indentation_count) << std::endl;
 			}
 		}
 	}

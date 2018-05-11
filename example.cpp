@@ -1,5 +1,27 @@
 namespace My_Namespace
 {
+
+	/**
+	 * @brief      Given two variables it will return the minimum value
+	 *
+	 * @param[in]  a          The first value
+	 * @param[in]  b          The second value
+	 * @param[in]  compare_func  The compare function
+	 *
+	 * @tparam     T          Type of the values
+	 * @tparam     TCompare   Type of the compare function
+	 *
+	 * @return     The minimum value of the two
+	 */
+	template<typename T, typename TCompare = default_less_than<T>>
+	inline static const T&
+	min(const T& a, const T& b, TCompare&& compare_func = TCompare())
+	{
+		if(compare_func(b, a))
+			return b;
+		return a;
+	}
+
 	/**
 	 * @brief      This is my BaseA
 	 */
